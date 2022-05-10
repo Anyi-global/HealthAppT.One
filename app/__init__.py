@@ -2,7 +2,7 @@ from flask import Flask
 from flask_pymongo import PyMongo
 import os
 
-app = Flask(__name__, template_folder=templates, static_folder=static)
+app = Flask(__name__, static_folder=app/static)
 
 
 SECRET_KEY = os.environ.get('SECRET_KEY') or "ajajajjsjsjajjajaaw333"
