@@ -15,7 +15,7 @@ app.config.from_object(app_settings)
 
 
 #connecting to database
-MONGO_URI = os.environ.get('MONGO_URI') or "mongodb+srv://andrew_uche:andrewuche4810@cluster0.fcitc.mongodb.net/HEALTHAPP?retryWrites=true&w=majority"
+MONGO_URI = os.environ.get('MONGO_URI') or "mongodb+srv://fabulous95:Ifeanyi7.ii@cluster0.nz9zg.mongodb.net/HealthApp?retryWrites=true&w=majority"
 
 #initializing PyMongo
 mongo = PyMongo(app, MONGO_URI)
