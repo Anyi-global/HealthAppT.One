@@ -1,0 +1,255 @@
+{% extends 'base.html' %}
+
+{% block title %} Doctors {% endblock %}
+
+  {% block main %}
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope"></i> <a href="mailto:skyview95.ii@gmail.com">teamone@gmail.com</a>
+        <i class="bi bi-phone"></i> +2349038503700
+      </div>
+      <div class="d-none d-lg-flex social-links align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top bg-info">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html">TeamOne<br>HealthCare</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto" href="#">Home</a></li>
+          <li><a class="nav-link scrollto" href="about.html">About</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#services">Services</a></li> -->
+          <li><a class="nav-link scrollto" href="/department">Departments</a></li>
+          <li class="dropdown"><a href="#"><span>Health information</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="/dementia">Dementia</a></li>
+              <li><a href="/dermatitis">Dermatitis</a></li>
+              <li><a href="/diabetes">Diabetes</a></li>
+              <li><a href="/cancer">Cancer</a></li>
+              <li><a href="#">Carcinoid syndrome</a></li>
+              <li><a href="#">Cataracts</a></li>
+              <li><a href="#">Brain aneurysm</a></li>
+              <li><a href="#">Ependymoma</a></li>
+              <li><a href="#">Esophagitis</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="/doctors">Find a Doctor</a></li>
+              <li class="dropdown-divider"></li>
+              <li><a href="/appointment">Request an Appointment</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <!-- <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a> -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <body>
+
+    <!-- ======= Doctors Section ======= -->
+    <section id="doctors" class="doctors">
+        <div class="container">
+          <div>
+            <button class="btn btn-success btn-lg"><a href="/appointment" class="text-white"><i class="bi bi-calendar-check p-2 text-white"></i>Request an Appointment</a></button>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+            
+                    <h2>Doctors</h2>
+                    <p>Contact our qualified doctors that specializes in finding solutions to different kinds of health problems.</p>
+                </div>
+            </div>
+            
+        </div>
+  
+          <div class="row">
+  
+            <div class="col-lg-6">
+              <div class="member d-flex align-items-start">
+                <div class="pic"><img src="{{ url_for('static', filename='img/doctors/doctors-1.jpg') }}" alt="" class="img-fluid"></div>
+                <div class="member-info">
+                  <h4>Dr. Ike Ifeanyi</h4>
+                  <span>Dentist (Chief Medical Officer)</span>
+                  <p>Specializes in all kinds of dental problems.</p>
+                  <div class="social">
+                    <a href=""><i class="ri-twitter-fill"></i></a>
+                    <a href=""><i class="ri-facebook-fill"></i></a>
+                    <a href=""><i class="ri-instagram-fill"></i></a>
+                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                  </div>
+                 <button class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact Me</button>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-6 mt-4 mt-lg-0">
+              <div class="member d-flex align-items-start">
+                <div class="pic"><img src="{{ url_for('static', filename='img/doctors/doctors-2.jpg') }}" alt="" class="img-fluid"></div>
+                <div class="member-info">
+                  <h4>Dr. Anwakobe Joy</h4>
+                  <span>Optmetrist</span>
+                  <p>Specializes in all kinds of eye problems.</p>
+                  <div class="social">
+                    <a href=""><i class="ri-twitter-fill"></i></a>
+                    <a href=""><i class="ri-facebook-fill"></i></a>
+                    <a href=""><i class="ri-instagram-fill"></i></a>
+                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                  </div>
+                  <button class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#dentistModal">Contact Me</button>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-6 mt-4">
+              <div class="member d-flex align-items-start">
+                <div class="pic"><img src="{{ url_for('static', filename='img/doctors/doctors-3.jpg') }}" alt="" class="img-fluid"></div>
+                <div class="member-info">
+                  <h4>Dr. Ogolo-Christian Wisdom</h4>
+                  <span>Physiotherapist</span>
+                  <p>Specializes in all kinds of physiological problems</p>
+                  <div class="social">
+                    <a href=""><i class="ri-twitter-fill"></i></a>
+                    <a href=""><i class="ri-facebook-fill"></i></a>
+                    <a href=""><i class="ri-instagram-fill"></i></a>
+                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                  </div>
+                  <button class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#neuroModal">Contact Me</button>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-6 mt-4">
+              <div class="member d-flex align-items-start">
+                <div class="pic"><img src="{{ url_for('static', filename='img/doctors/doctors-4.jpg') }}" alt="" class="img-fluid"></div>
+                <div class="member-info">
+                  <h4>Dr. Mero Joy</h4>
+                  <span>Neurosurgeon</span>
+                  <p>Specializes in brain surgery.</p>
+                  <div class="social">
+                    <a href=""><i class="ri-twitter-fill"></i></a>
+                    <a href=""><i class="ri-facebook-fill"></i></a>
+                    <a href=""><i class="ri-instagram-fill"></i></a>
+                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                  </div>
+                  <button class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#cardiacModal">Contact Me</button>
+                </div>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- End Doctors Section -->
+
+      {% endblock %}
+
+      {% block modal %}
+   <!-- Modal 1-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-primary" id="exampleModalLabel">My Contacts</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <span><strong> Phone Number:</strong> +234 9038503700</span><br>
+          <span><strong> Address:</strong> Federal University Otuoke</span><br>
+          <span><strong> e-mail address:</strong> skyview95.ii@gmail.com</span><br>
+          <span><strong> Freelance:</strong> Available</span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Modal 2-->
+<div class="modal fade" id="dentistModal" tabindex="-1" aria-labelledby="dentistModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-primary" id="dentistModalLabel">My Contacts</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <span><strong> Phone Number:</strong> +234 09071194913</span><br>
+          <span><strong> Address:</strong> Federal University Otuoke</span><br>
+          <span><strong> e-mail address:</strong> anwakobe15@gmail.com</span><br>
+          <span><strong> Freelance:</strong> Available</span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Modal 3-->
+<div class="modal fade" id="neuroModal" tabindex="-1" aria-labelledby="neuroModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-primary" id="neuroModalLabel">My Contacts</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <span><strong> Phone Number:</strong> +234 9067974646</span><br>
+          <span><strong> Address:</strong> Federal University Otuoke</span><br>
+          <span><strong> e-mail address:</strong> wisdom.ogolo17@gmail.com</span><br>
+          <span><strong> Freelance:</strong> Available</span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Modal 4-->
+<div class="modal fade" id="cardiacModal" tabindex="-1" aria-labelledby="cardiacModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-primary" id="cardiacModalLabel">My Contacts</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <span><strong> Phone Number:</strong> +234 9045900729</span><br>
+          <span><strong> Address:</strong> Federal University Otuoke</span><br>
+          <span><strong> e-mail address:</strong> joymero744@gmail.com</span><br>
+          <span><strong> Freelance:</strong> Available</span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
