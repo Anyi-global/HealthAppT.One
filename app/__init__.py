@@ -6,6 +6,7 @@ app = Flask(__name__)
 
 
 SECRET_KEY = os.environ.get('SECRET_KEY') or "ajajajjsjsjajjajaaw333"
+
 #app configuration
 app_settings = os.environ.get(
     'APP_SETTINGS'
